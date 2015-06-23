@@ -68,3 +68,7 @@ biHiSankey.nodeWidth();
 biHiSankey.nodeSpacing();
 biHiSankey.size();
 ```
+
+### License
+
+BiHiSankey is released under the [MIT License](http://opensource.org/licenses/MIT).
