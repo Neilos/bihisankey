@@ -277,7 +277,7 @@ d3.biHiSankey = function () {
   }
 
   function computeNodeXPositions() {
-    var remainingNodes = nodes,
+    var remainingNodes = nodes.sort((n1, n2) => (n2.depth || 0) - (n1.depth || 0)),
         nextNodes,
         x = 0,
         addToNextNodes = function (link) {

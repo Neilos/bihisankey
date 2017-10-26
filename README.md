@@ -5,8 +5,7 @@ This is a d3 javascript plugin/library for generating bidirectional hierarchial 
 ### Live Code Demonstration
 
 For a a full demonstration of the use of this library:
-http://bl.ocks.org/Neilos/584b9a5d44d5fe00f779
-
+http://bl.ocks.org/duhaime/3865371eea1bd32b36f53e63dabb6b72
 
 ### Overview
 
@@ -23,12 +22,12 @@ biHiSankey
 To (re)initialize the sankey diagram with data
 ```javascript
 var someNodes = [
-  {"type" => "A", "id" => 1, "parent" => null, "name" => "Node 1"},
-  {"type" => "A", "id" => 2, "parent" => "1", "name" => "Node 2"},
-  {"type" => "A", "id" => 3, "parent" => "1", "name" => "Node 3"},
-  {"type" => "B", "id" => 4, "parent" => null, "name" => "Node 4"},
-  {"type" => "B", "id" => 5, "parent" => "4", "name" => "Node 5"},
-  {"type" => "C", "id" => 6, "parent" => "5", "name" => "Node 6"},
+  {"type": "A", "id": 1, "parent": null, "name": "Node 1", depth: 0},
+  {"type": "A", "id": 2, "parent": "1", "name": "Node 2"},
+  {"type": "A", "id": 3, "parent": "1", "name": "Node 3"},
+  {"type": "B", "id": 4, "parent": null, "name": "Node 4", depth: 1},
+  {"type": "B", "id": 5, "parent": "4", "name": "Node 5"},
+  {"type": "C", "id": 6, "parent": "5", "name": "Node 6"},
 ]
 var someLinks = [
   {source: 3, target: 2, value: 20},
@@ -46,6 +45,8 @@ biHiSankey
     // ...
   })
 ```
+
+If two nodes `(n1, n2)` have different depths: `n1.depth < n2.depth` then the node `n1` will be placed to the left of `n2`
 
 To (re)calculate the attributes of all nodes and links:
 ```javascript
