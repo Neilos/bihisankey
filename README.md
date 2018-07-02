@@ -1,3 +1,11 @@
+
+**THIS LIBRARY IS NO LONGER MAINTAINED.**
+
+**D3 versions 4 and above not supported**
+
+----
+
+
 ## BiDirectional Hierarchical Sankey Diagram
 
 This is a d3 javascript plugin/library for generating bidirectional hierarchial sankey diagrams
